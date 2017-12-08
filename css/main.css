@@ -38,6 +38,12 @@
   content:url("../images/good-gymbag.png");
 }
 
+.logo{
+  content:url("../images/logo.png");
+  width:100%;
+
+}
+
 
 
 /**********************************************/
@@ -95,6 +101,31 @@
   margin-top: 25%;
   position: absolute;
   margin-left: 33%;
+}
+
+.carousel-indicators >li{
+  background-color: #bfbfbf;
+}
+
+.carousel-indicators >li.active{
+  background-color: #000;
+}
+
+.carousel-inner > div.item{
+  margin: 3%;
+}
+
+.carousel-inner > div.item > img{
+  border-radius: 10px;
+  max-height: 400px;
+  margin: auto;
+}
+.carousel-control{
+  background-image: none!important;
+}
+
+e{
+  font-size: 28px;
 }
 
 @media only screen and (max-width: 500px) {

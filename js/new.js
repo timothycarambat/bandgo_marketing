@@ -37,7 +37,18 @@ var imgNames = [
   ['no-gymbag-bandgo','yes-gymbag-bandgo'],
 ];
 
+var lovelyCustomerTypes = [
+  'Businesswoman &#x1F4BC;',
+  'Athlete &#x1F4AA;',
+  'Teacher &#x1F34E;',
+  'Nurse &#x1F489;',
+  'Student &#x1F393;	',
+  'Astronaut &#x1F680;',
+];
+
+
 $(function(){
+  setInterval(function() { changeCustomerType(lovelyCustomerTypes) }  , 2000 )
 
   //Smooth Scroll, make a elements with href='#item' and target of that id without #
   $('a[href^="#"]').on('click', function(event) {
@@ -123,4 +134,17 @@ function resetClick(e,fixed,bad){
       resetToNext(e,fixed,bad);
   });
 
+}
+
+function changeCustomerType(types){
+  var currentType = $('e').data('type');
+  var newType = Math.floor(Math.random() * types.length);
+  if(newType === currentType){
+    newType = Math.floor(Math.random() * types.length);
+  }
+
+   $('e').fadeOut(500, function(){
+     $(this).html("<b>"+String(types[newType]).toUpperCase()+"</b>").fadeIn(800);
+   });
+   $('e').data('type',newType);
 }
