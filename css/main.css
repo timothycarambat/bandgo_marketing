@@ -117,7 +117,7 @@
 
 .carousel-inner > div.item > img{
   border-radius: 10px;
-  max-height: 400px;
+  max-height: 200px;
   margin: auto;
 }
 .carousel-control{

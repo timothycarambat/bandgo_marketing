@@ -38,12 +38,13 @@ var imgNames = [
 ];
 
 var lovelyCustomerTypes = [
-  'Businesswoman &#x1F4BC;',
+  'Business Person &#x1F4BC;',
   'Athlete &#x1F4AA;',
   'Teacher &#x1F34E;',
   'Nurse &#x1F489;',
   'Student &#x1F393;	',
   'Astronaut &#x1F680;',
+  'Stylist &#x1F487;'
 ];
 
 

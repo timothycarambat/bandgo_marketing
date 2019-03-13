@@ -194,20 +194,64 @@
 		}
 	};
 
+var getImages = async function(path) {
+	var images = []
+	return new Promise(resolve => {
+		$.ajax({
+	    url : path,
+	    success: function (data) {
+	        $(data).find("a").attr("href", function (i, val) {
+	            if( val.match(/\.(jpe?g|png|gif)$/) ) {
+	                images.push(val);
+	            }
+	        });
+					resolve(images)
+	    }
+		});
+	})
+
+}
+
+var loadgallery = async function() {
+	var path = 'images/gallery'
+	var images = await getImages(path);
+	var htmlString = `
+	<ol class="carousel-indicators">
+	${
+		images.map((imageName, i) => {
+			return `<li data-target="#gallery" data-slide-to="${i}" ${i == 0 ? 'class="active"' : ''}></li>`
+		}).join('')
+	}
+	</ol>
+	<div class="carousel-inner">
+		${
+			images.map((imageName, i) => {
+				return `
+				<div class="item ${i==0 ? 'active' : ''}">
+					<img src="${path}/${imageName}">
+				</div>`
+			}).join('')
+		}
+	</div>
+	`
+	var html = $.parseHTML(htmlString)
+	$('#gallery').prepend(
+		html.filter((node) => node.nodeName != '#text')
+	);
+
+	owlCrouselFeatureSlide();
+}
+
 
 
 
 	$(function(){
-
+		loadgallery();
 		burgerMenu();
-		owlCrouselFeatureSlide();
 		magnifPopup();
-
 		featureIconsWayPoint();
 		productsWayPoint();
 		clientsWayPoint();
-
-
 	});
 
 
