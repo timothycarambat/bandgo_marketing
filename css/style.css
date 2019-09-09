@@ -1427,7 +1427,8 @@ pre code {
   margin-right: -20px; }
 .row:before, .row:after {
   content: " ";
-  display: table; }
+  /* display: table; */
+  }
 .row:after {
   clear: both; }
 

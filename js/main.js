@@ -246,7 +246,7 @@ var loadgallery = async function() {
 
 
 	$(function(){
-		loadgallery();
+		// loadgallery();
 		burgerMenu();
 		magnifPopup();
 		featureIconsWayPoint();

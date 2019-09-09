@@ -167,3 +167,61 @@ e{
   }
 
 }
+
+html, body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+.btn-cta {
+  background-color: #9cc1fd;
+}
+
+.bandgo {
+  height: 400px;
+}
+
+.fh5co-slider {
+  padding-top: 9%;
+  padding-bottom: 13%;
+  background-color: #f1b3de;
+}
+
+.fh5co-slider {
+  clip-path:
+    polygon(
+      0% 0%,     /* top left */
+      0% 0%,     /* top left */
+      0% 0%,    /* top right */
+      100% 5%,   /* top right */
+
+      100% 55%,  /* bottom right */
+      65% 100%,  /* bottom right */
+
+      35% 100%,   /* bottom left */
+      0% 55%      /* bottom left */
+    );
+}
+
+.container-for-clip {
+  background-color: #b3f1c9;
+}
+
+.cta-text {
+  color: #FFF;
+}
+
+@media only screen and (max-width: 600px) {
+  .bandgo {
+    height: 200px;
+  }
+  .fh5co-slider {
+    padding-top: 50%;
+    padding-bottom: 50%;
+  }
+  .cta-text {
+        font-size: 120%;
+  }
+}
